@@ -7,13 +7,13 @@ body, html {
 }
 
 :root {
-  --darker: #28526F;
-  --dark: #4084AB;
-  --light: #60B1E0;
-  --soft:   #C0D6E2;
-  --highlight: #FFDFBE;
-  --white: #faf6f5;
-  --grey: #CCCCCC;
+  --darker: rgb(40, 82, 111);
+  --dark: rgb(64, 132, 171);
+  --light: rgb(96, 177, 224);
+  --soft:   rgb(192, 214, 226);
+  --highlight: rgb(255, 223, 190);
+  --white: rgb(250, 246, 245);
+  --grey: rgb(204, 204, 204);
 }
 
 @media (max-width: 1024px) {
@@ -212,7 +212,8 @@ footer {
   display: flex;
   padding: 10px;
   background-color: var(--dark);
-  justify-content: center; /* Center content horizontally */
+  justify-content: center;
+  /* margin-top: auto; */
 }
 
 .footer-note{
