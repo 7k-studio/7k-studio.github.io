@@ -71,6 +71,7 @@ h1, h2, h3, h4, h5, h6 {font-family:Georgia, serif;}
   top: 0;
   width: 100%;
   z-index: 100;
+  display: flex;
 }
 .navbar a {
   float: left;
@@ -84,12 +85,27 @@ h1, h2, h3, h4, h5, h6 {font-family:Georgia, serif;}
   background: var(--soft);
   color: white;
 }
+.navbar-logo {
+  margin-left: auto !important;
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center;
+  background: none !important;
+}
+.navbar-logo img {
+  height: 50px;
+  display: block;
+}
+.navbar-logo:hover {
+  background: none !important;
+}
 
 /* Hero section */
 .hero-image {
   background: var(--light);
   background-size: cover;
   background-position: center;
+  min-height: 350px;
   height: 40vh;
   display: flex;
   justify-content: center;
@@ -169,7 +185,7 @@ h1, h2, h3, h4, h5, h6 {font-family:Georgia, serif;}
 
 .card {
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  flex: 1 1 280px;
+  flex: 1 1 120px;
   max-width: 320px;
   margin: 15px;
   padding: 24px;
@@ -226,7 +242,7 @@ footer {
 
 .blocks {
   background: #F2EFEE;
-  padding: 15px;
+  padding: 38px;
   color: #000;
 }
 
