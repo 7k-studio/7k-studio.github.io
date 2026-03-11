@@ -1,0 +1,362 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+  line-height: 2.5cap;
+  background-color: var(--taupe_brown);
+}
+
+:root {
+  --soft_sand: #F2D5A0;
+  --dark_olive: #3F4030;
+  --taupe_brown: #A6886D;
+  --rust_brown: #A6592D;
+  --soft:   rgb(192, 214, 226);
+  --highlight: rgb(255, 223, 190);
+  --white: rgb(250, 246, 245);
+  --grey: rgb(204, 204, 204);
+}
+
+.folder {
+  display: block;
+  margin: 25px;
+  padding: 15px;
+}
+
+.folder .rectangle {
+  background-color: var(--rust_brown);
+  height: 50px;
+}
+
+.folder .trapezoid {
+	border-bottom: 50px solid var(--rust_brown);
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+  border-width: 1px;
+	height: 0;
+	width: fit-content;
+  min-width: 10%;
+}
+
+
+
+.notebook {
+  display: block;
+  margin: 25px;
+  padding: 25px;
+}
+
+.cornell {  
+  display: block;
+  background-color: var(--soft_sand);
+  border-color: var(--dark_olive);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 15px;
+  margin: 25px;
+  padding: 35px;
+}
+
+.cornell .header {
+  display: block;
+  border-color: var(--dark_olive);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  margin: 15px;
+  padding: 25px;
+}
+
+.cornell .page {
+  display: flex;
+}
+
+.cornell .page .notes {
+  background-image: radial-gradient(var(--taupe_brown) 1px, transparent 0);
+  background-size: 20px 20px;
+  background-position: -19px -19px;
+  border-color: var(--dark_olive);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  width: 80%;
+  margin: 15px;
+  padding: 25px;
+}
+
+.cornell .page .cues {
+  background-image: radial-gradient(var(--taupe_brown) 1px, transparent 0);
+  background-size: 20px 20px;
+  background-position: -19px -19px;
+  border-color: var(--dark_olive);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  width: 20%;
+  margin: 15px;
+  padding: 25px;
+}
+
+.cornell .summary {
+  display: block;
+  background-image: radial-gradient(var(--taupe_brown) 1px, transparent 0);
+  background-size: 20px 20px;
+  background-position: -19px -19px;
+  border-color: var(--dark_olive);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  margin: 15px;
+  padding: 25px;
+}
+
+@media (max-width: 1024px) {
+  .section .body {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  /* Make content blocks full width when stacked */
+  .section .body .section-image,
+  .section .body .section-text,
+  .section .body .text {
+    width: 100%;
+  }
+
+  /* Default: image below text (use .image-first on .section to place image above) */
+  .section .body .section-image { order: 1; }
+  .section .body .section-text,
+  .section .body .text { order: 0; }
+
+  /* If you want the image above the text, add .image-first to the .section element */
+  .section.image-first .body .section-image { order: 0; }
+  .section.image-first .body .section-text,
+  .section.image-first .body .text { order: 1; }
+
+  /* Make images scale nicely */
+  .section-image img {
+    max-width: 100%;
+    height: auto;
+    max-height: none;
+  }
+
+  /* Tweak mission and cards layout for small screens */
+  #mission { flex-direction: column; gap: 16px; }
+  #mission .blocks { width: 100%; border-radius: 12px; }
+  .row { flex-direction: column; align-items: center;}
+  /* Keep cards sized to their content on small screens */
+  .card {
+   max-width: 640px;
+   width: auto;        /* don't force full width */
+   flex: 0 0 auto;     /* prevent stretching in column layout */
+    align-self: center; /* keep cards centered */
+  }
+  .section { padding: 40px 20px; }
+}
+
+h1, h2, h3, h4, h5, h6 {font-family:Georgia, serif;}
+
+/* Navbar */
+.navbar {
+  overflow: hidden;
+  background-color: var(--dark);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+}
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.navbar a:hover {
+  background: var(--soft);
+  color: white;
+}
+.navbar-logo {
+  margin-left: auto !important;
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center;
+  background: none !important;
+}
+.navbar-logo img {
+  height: 50px;
+  display: block;
+}
+.navbar-logo:hover {
+  background: none !important;
+}
+
+/* Hero section */
+.hero-image {
+  background: var(--light);
+  background-size: cover;
+  background-position: center;
+  min-height: 350px;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+}
+.hero-text h1 {
+  font-size: 3.2em;
+  margin: 0;
+}
+.hero-text p {
+  font-size: 1.2em;
+  margin-top: 8px;
+}
+.hero-buttons {
+  margin-top: 20px;
+}
+.btn {
+  border: none;
+  padding: 14px 28px;
+  margin: 0 10px;
+  cursor: pointer;
+  font-size: 1em;
+  border-radius: 6px;
+}
+.btn-primary {
+  background-color: var(--highlight);
+  color: var(--darker);
+  font-weight: bolder;
+}
+.btn-primary:hover {
+  background-color: var(--grey);
+}
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid var(--white);
+  color: white;
+  font-weight: bolder;
+}
+.btn-outline:hover {
+  background-color: var(--white);
+  color: black;
+}
+
+/* Section spacing */
+.section {
+  padding: 60px 40px;
+  background-color: var(--white);
+}
+
+.section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.section .header{
+  max-width: 1200px;
+  justify-content: center;
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.2em;
+}
+
+/* Features */
+.row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  flex: 1 1 120px;
+  max-width: 320px;
+  margin: 15px;
+  padding: 24px;
+  background-color: var(--white);
+  border-radius: 8px;
+}
+.card h3 {
+  margin-top: 0;
+}
+.card p {
+  margin: 8px 0 0;
+}
+
+/* Airfoil Designer */
+.section .body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-text {
+    flex: 1;
+    text-align: left;
+}
+
+.section-image {
+    flex: 1;
+    text-align: center;
+}
+
+.section-image img {
+    max-height: 350px;
+    height: auto;
+}
+
+footer {
+  display: flex;
+  padding: 10px;
+  background-color: var(--dark);
+  justify-content: center;
+  /* margin-top: auto; */
+}
+
+.footer-note{
+  display: flex;
+  font-size: 0.8em;
+  color: #fff;
+  align-items: center;
+  text-align: center;
+}
+
+.blocks {
+  background: #F2EFEE;
+  padding: 38px;
+  color: #000;
+}
+
+.blocks header {
+  padding: 15px;
+  font-size: xx-large;
+  font-weight: bold;
+  font-family:Georgia, serif;
+  text-align: center;
+}
+
+#mission {
+  display: flex; /* Enable flexbox layout */
+  flex-direction: row; /* Align children in a row */
+  gap: 20px; /* Add spacing between blocks */
+  background-color: #222; /* Retain background color */
+}
+
+#about img {
+  display: block; /* Treat the image as a block element */
+  margin: 0 auto; /* Center the image horizontally */
+}
