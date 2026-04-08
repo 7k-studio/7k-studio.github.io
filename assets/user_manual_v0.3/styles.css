@@ -44,13 +44,23 @@ along with Deadalus.  If not, see <http://www.gnu.org/licenses/>.
       display: flex;
       justify-content: flex-start;
       padding: 10px 20px;
+      gap: 12px;
     }
 
     .section-menu button {
       background: none;
       border: none;
       color: white;
-      margin-right: 20px;
+      font-size: 16px;
+      cursor: pointer;
+      align-content: center;
+    }
+
+    .section-menu .nav-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
       font-size: 16px;
       cursor: pointer;
     }
@@ -66,6 +76,7 @@ along with Deadalus.  If not, see <http://www.gnu.org/licenses/>.
     }
 
     .sidebar {
+      display: block;
       width: 220px;
       background-color: #ecf0f1;
       padding: 20px;
@@ -124,9 +135,9 @@ along with Deadalus.  If not, see <http://www.gnu.org/licenses/>.
       background: none;
       border: none;
       color: white;
-      margin-right: 20px;
       font-size: 16px;
       cursor: pointer;
+      align-content: center;
     }
 
     .section-menu link:hover {
@@ -138,7 +149,6 @@ along with Deadalus.  If not, see <http://www.gnu.org/licenses/>.
       background: none;
       border: none;
       color: white;
-      margin-right: 20px;
       font-size: 16px;
       cursor: pointer;
       display: inline-block;
@@ -151,7 +161,7 @@ along with Deadalus.  If not, see <http://www.gnu.org/licenses/>.
       text-decoration: underline;
     }
 
-        body {
+    body {
       margin: 0;
       font-family: Arial, sans-serif;
       display: flex;
@@ -175,8 +185,10 @@ along with Deadalus.  If not, see <http://www.gnu.org/licenses/>.
     h1 {
       text-align: left;
       margin-bottom: 2rem;
-      color: #2b2b2b;
-      margin-left: 50px;
+      color: #fff;
+      font-size: xx-large; 
+      margin-top: 0px; 
+      margin-bottom: 0px;
     }
 
     details {
@@ -242,27 +254,6 @@ along with Deadalus.  If not, see <http://www.gnu.org/licenses/>.
        padding: 0.2em; 
        border-radius: 1px; }
 
-    .section-menu {
-      background-color: #34495e;
-      color: white;
-      display: flex;
-      justify-content: flex-start;
-      padding: 10px 20px;
-    }
-
-    .section-menu button {
-      background: none;
-      border: none;
-      color: white;
-      margin-right: 20px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    .section-menu button:hover {
-      text-decoration: underline;
-    }
-
     .container {
       display: flex;
       flex: 1;
@@ -325,24 +316,6 @@ along with Deadalus.  If not, see <http://www.gnu.org/licenses/>.
     .highlight { background: #e1f5fe;
        padding: 0.2em; 
        border-radius: 1px; }
-    
-        /* Add styles for the Changelog link to look like a button */
-    .button-link {
-      background: none;
-      border: none;
-      color: white;
-      margin-right: 20px;
-      font-size: 16px;
-      cursor: pointer;
-      display: inline-block;
-      text-decoration: none;
-      text-align: center;
-
-    }
-
-    .button-link:hover {
-      text-decoration: underline;
-    }
 
     .note {
       background-color: #ffed9c;
@@ -361,4 +334,35 @@ along with Deadalus.  If not, see <http://www.gnu.org/licenses/>.
     .note h3 {
       font-weight: bold;
       margin: 0px;
+    }
+
+    @media (max-width: 1000px) {
+      h1 {
+        font-size: large; 
+      }
+
+      .sidebar {
+        display: none;
+      }
+
+      .section-menu {
+        gap: 8px;
+        padding: 10px 5px;
+      }
+
+      .section-menu nav-btn {
+        display: flex;
+      }
+      .section-menu button {
+          font-size: 12px;
+        }
+
+      .button-link {
+          font-size: 12px;
+          align-content: center;
+        }
+      
+      .section-menu .nav-btn {
+        display: flex;
+      }
     }

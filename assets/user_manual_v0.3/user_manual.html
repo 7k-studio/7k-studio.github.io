@@ -1,20 +1,20 @@
 <!--
 Copyright (C) 2025 Jakub Kamyk
 
-This file is part of Deadalus.
+This file is part of Daedalus.
 
-Deadalus is free software: you can redistribute it and/or modify
+Daedalus is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation; either version 3 of the License, or
 (at your option) any later version.
 
-Deadalus is distributed in the hope that it will be useful,
+Daedalus is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
-along with Deadalus.  If not, see <http://www.gnu.org/licenses/>.
+along with Daedalus.  If not, see <http://www.gnu.org/licenses/>.
 -->
 
 <!DOCTYPE html>
@@ -22,7 +22,7 @@ along with Deadalus.  If not, see <http://www.gnu.org/licenses/>.
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Deadalus v0.3.2beta User Manual</title>
+  <title>Daedalus v0.3 beta User Manual</title>
   <link rel="stylesheet" href="styles.css">
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
@@ -32,14 +32,17 @@ along with Deadalus.  If not, see <http://www.gnu.org/licenses/>.
   <header>
       <img src="assets/logo.png" alt="Program Logo" height="40"/>
       <div>
-        <p style="font-size: xx-large; margin-top: 0px; margin-bottom: 0px;">Deadalus User Manual</p>
-        <p style="font-size: smaller; margin-top: 0px; margin-bottom: 0px;">for the version: v0.3.2beta</p>
+        <h1>Daedalus User Manual</h1>
+        <p style="font-size: smaller; margin-top: 0px; margin-bottom: 0px;">for the version: v0.3 beta</p>
       </div>
   </header>
 
   <!-- Top Navigation Menu -->
   <div class="section-menu">
-    <button onclick="showSection('Deadalus')">Deadalus</button>
+    <button onclick="openNav()" class="nav-btn" id="btnNav">
+      <svg fill="#fff" width="32px" height="32px" viewBox="0 0 2.56 2.56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><path id="Icons" x="-128" y="-192" width="1280" height="800" style="fill:none;" d="M-5.12 -7.68h51.2v32h-51.2z"/><g id="Icons1" serif:id="Icons"><g id="Strike"/><g id="H1"/><g id="H2"/><g id="H3"/><g id="list-ul"/><g id="hamburger-1"/><g id="hamburger-2"/><g id="list-ol"/><g id="list-task"/><g id="trash"/><g id="vertical-menu"/><g id="horizontal-menu"/><g id="sidebar-2"><path d="M2 2.242H0.561a0.24 0.24 0 0 1 -0.24 -0.24V0.562a0.24 0.24 0 0 1 0.24 -0.24h1.44a0.24 0.24 0 0 1 0.24 0.24v1.44a0.24 0.24 0 0 1 -0.24 0.24m-1.039 -0.16v-1.6H0.601a0.12 0.12 0 0 0 -0.12 0.12v1.361a0.12 0.12 0 0 0 0.12 0.12zm1 -1.6h-0.841v1.6h0.84a0.12 0.12 0 0 0 0.12 -0.12V0.601a0.12 0.12 0 0 0 -0.12 -0.12"/><path x="14.611" y="16.042" width="6.569" height="2" style="fill-rule:nonzero;" d="M0.584 0.642h0.263v0.08H0.584z"/><path x="14.611" y="24.042" width="6.569" height="2" style="fill-rule:nonzero;" d="M0.584 0.962h0.263v0.08H0.584z"/><path x="14.611" y="20.042" width="6.569" height="2" style="fill-rule:nonzero;" d="M0.584 0.802h0.263v0.08H0.584z"/></g><g id="Pen"/><g id="Pen1" serif:id="Pen"/><g id="clock"/><g id="external-link"/><g id="hr"/><g id="info"/><g id="warning"/><g id="plus-circle"/><g id="minus-circle"/><g id="vue"/><g id="cog"/><g id="logo"/><g id="radio-check"/><g id="eye-slash"/><g id="eye"/><g id="toggle-off"/><g id="shredder"/><g id="spinner--loading--dots-" serif:id="spinner [loading, dots]"/><g id="react"/><g id="check-selected"/><g id="turn-off"/><g id="code-block"/><g id="user"/><g id="coffee-bean"/><g id="coffee-beans"><g id="coffee-bean1" serif:id="coffee-bean"/></g><g id="coffee-bean-filled"/><g id="coffee-beans-filled"><g id="coffee-bean2" serif:id="coffee-bean"/></g><g id="clipboard"/><g id="clipboard-paste"/><g id="clipboard-copy"/><g id="Layer1"/></g></svg>
+    </button>
+    <button onclick="showSection('Daedalus')">Daedalus</button>
     <a href="airfoil_designer.html" class="button-link">Airfoil Designer</a>
     <a href="wing_designer.html" class="button-link">Wing Designer</a>
     <a href="changelog.html" class="button-link">Changelog</a>
@@ -48,12 +51,12 @@ along with Deadalus.  If not, see <http://www.gnu.org/licenses/>.
   <!-- Main App Area -->
   <div class="container">
     <!-- Sidebar Menu -->
-    <nav class="sidebar">
+    <nav class="sidebar" id="navSidebar">
       <h3>Contents</h3>
 
-      <ul id="menu-Deadalus" class="context-menu">
+      <ul id="menu-Daedalus" class="context-menu">
         <li><a href="#intro">Introduction</a></li>
-        <li><a href="#Deadalus">Deadalus</a></li>
+        <li><a href="#Daedalus">Daedalus</a></li>
         <li><a href="#FileMenu">File Menu</a></li>
         <li><a href="#ProgramMenu">Program Menu</a></li>
         <!-- <li><a href="#todo">ToDo</a></li> -->
@@ -63,12 +66,12 @@ along with Deadalus.  If not, see <http://www.gnu.org/licenses/>.
 
     <!-- Main Content Area -->
     <main class="content">
-      <!-- Deadalus Section -->
-      <div id="Deadalus" class="page-section active">
+      <!-- Daedalus Section -->
+      <div id="Daedalus" class="page-section active">
           <h2>Introduction</h2>
           <p>
-              Welcome to the Deadalus user manual. 
-              Deadalus is a program for designing and editing airfoils and wings. 
+              Welcome to the Daedalus user manual. 
+              Daedalus is a program for designing and editing airfoils and wings. 
               This manual will guide you through the main features and help you get started with your projects.
           </p>
           <ul>
@@ -76,10 +79,10 @@ along with Deadalus.  If not, see <http://www.gnu.org/licenses/>.
               <li>Import/export airfoil files in various formats.</li>
               <li>Use the Wing Workbench for advanced wing design.</li>
           </ul>
-          <img src="assets/Deadalus/STEP_export.jpg" alt="Wing Workbench" height="500"/>
+          <img src="assets/Daedalus/STEP_export.jpg" alt="Wing Workbench" style="height: 50vw; max-height: 500px;"/>
 
-          <h2>Deadalus</h2>
-          <p>Deadalus consists of two modules: 
+          <h2>Daedalus</h2>
+          <p>Daedalus consists of two modules: 
             <a href="assets/airfoil_designer.html">2D airfoil designer</a> and
             <a href="assets/wing_designer.html">3D wing designer</a>.
             Each module is equipped with Menu Bar which allows for usage of functions and interaction with program objects and program itself.
@@ -87,14 +90,14 @@ along with Deadalus.  If not, see <http://www.gnu.org/licenses/>.
           </p>
 
           <h3>Getting Started</h3>
-          <p>Once DEADALUS program is started user will be welcomed by Splash Screen of the program. With splash screen you can:</p>
+          <p>Once DAEDALUS program is started user will be welcomed by Splash Screen of the program. With splash screen you can:</p>
           <ul>
               <li><b>Create new project:</b> Start a new project.</li>
               <li><b>Open existing project:</b> Load an existing project file.</li>
               <li><b>Open user manual:</b> Go directly to user manual without closing the Splash Screen</li>
               <li><b>Open realise notes:</b> Opens web browser with latest realise notes (reqires ethernet connection)</li>
           </ul>
-          <img src="assets/Deadalus/splashscreen.png" alt="Splash Screen"/> <br>
+          <img src="assets/Daedalus/splashscreen.png" alt="Splash Screen" style="height: 45vh; max-height: 400px;"/> <br>
 
           Once new File or Open Project is clicked an <a href="assets/airfoil_designer.html">Airfoil Designer</a> window opens.
           In every module user can interact with bar menu sections:
@@ -124,7 +127,7 @@ along with Deadalus.  If not, see <http://www.gnu.org/licenses/>.
               <li><strong>Angle:</strong> allows to set angle unit (for now only radians)</li>
             </ul>
             <strong>General performance: </strong> Allows user to choose the details level in graphics rendering. Performace level is set using slider where 10 is lowest and 100 is highest detail level.<br>
-            <img src="assets/Deadalus/preferences_general_performance.png" alt="preferences general performance"/>
+            <img src="assets/Daedalus/preferences_general_performance.png" alt="preferences general performance" style="height: 45vh; max-height: 400px;"/>
 
             <h5>Beta features</h5>
             Unlocks functions that are not well tested or stable. Used at user's own risk!
@@ -134,6 +137,18 @@ along with Deadalus.  If not, see <http://www.gnu.org/licenses/>.
       </div>
 
 <script>
+  const navSidebar = document.getElementById("navSidebar");
+
+  function openNav(e){
+      if (navSidebar.style.display === "block") {
+        navSidebar.style.display = "none";
+      } else {
+        navSidebar.style.display = "block";
+      }
+  }
+
+  const btnNav = document.getElementById('btnNav')
+
   function showSection(sectionId) {
     // Hide all sections
     document.querySelectorAll('.page-section').forEach(el => el.classList.remove('active'));

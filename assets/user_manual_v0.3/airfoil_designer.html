@@ -1,20 +1,20 @@
 <!--
 Copyright (C) 2025 Jakub Kamyk
 
-This file is part of Deadalus.
+This file is part of Daedalus.
 
-Deadalus is free software: you can redistribute it and/or modify
+Daedalus is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation; either version 3 of the License, or
 (at your option) any later version.
 
-Deadalus is distributed in the hope that it will be useful,
+Daedalus is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
-along with Deadalus.  If not, see <http://www.gnu.org/licenses/>.
+along with Daedalus.  If not, see <http://www.gnu.org/licenses/>.
 -->
 
 <!DOCTYPE html>
@@ -22,7 +22,7 @@ along with Deadalus.  If not, see <http://www.gnu.org/licenses/>.
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Deadalus User Manual</title>
+  <title>Daedalus User Manual</title>
   <link rel="stylesheet" href="styles.css">
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
@@ -32,14 +32,17 @@ along with Deadalus.  If not, see <http://www.gnu.org/licenses/>.
   <header>
       <img src="assets/logo.png" alt="Program Logo" height="40"/>
       <div>
-        <p style="font-size: xx-large; margin-top: 0px; margin-bottom: 0px;">Deadalus User Manual</p>
-        <p style="font-size: smaller; margin-top: 0px; margin-bottom: 0px;">for the version: v0.3.2beta</p>
+        <h1>Daedalus User Manual</h1>
+        <p style="font-size: smaller; margin-top: 0px; margin-bottom: 0px;">for the version: v0.3 beta</p>
       </div>
   </header>
 
   <!-- Top Navigation Menu -->
   <div class="section-menu">
-    <a href="user_manual.html" class="button-link">Deadalus</a>
+    <button onclick="openNav()" class="nav-btn" id="btnNav">
+      <svg fill="#fff" width="32px" height="32px" viewBox="0 0 2.56 2.56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><path id="Icons" x="-128" y="-192" width="1280" height="800" style="fill:none;" d="M-5.12 -7.68h51.2v32h-51.2z"/><g id="Icons1" serif:id="Icons"><g id="Strike"/><g id="H1"/><g id="H2"/><g id="H3"/><g id="list-ul"/><g id="hamburger-1"/><g id="hamburger-2"/><g id="list-ol"/><g id="list-task"/><g id="trash"/><g id="vertical-menu"/><g id="horizontal-menu"/><g id="sidebar-2"><path d="M2 2.242H0.561a0.24 0.24 0 0 1 -0.24 -0.24V0.562a0.24 0.24 0 0 1 0.24 -0.24h1.44a0.24 0.24 0 0 1 0.24 0.24v1.44a0.24 0.24 0 0 1 -0.24 0.24m-1.039 -0.16v-1.6H0.601a0.12 0.12 0 0 0 -0.12 0.12v1.361a0.12 0.12 0 0 0 0.12 0.12zm1 -1.6h-0.841v1.6h0.84a0.12 0.12 0 0 0 0.12 -0.12V0.601a0.12 0.12 0 0 0 -0.12 -0.12"/><path x="14.611" y="16.042" width="6.569" height="2" style="fill-rule:nonzero;" d="M0.584 0.642h0.263v0.08H0.584z"/><path x="14.611" y="24.042" width="6.569" height="2" style="fill-rule:nonzero;" d="M0.584 0.962h0.263v0.08H0.584z"/><path x="14.611" y="20.042" width="6.569" height="2" style="fill-rule:nonzero;" d="M0.584 0.802h0.263v0.08H0.584z"/></g><g id="Pen"/><g id="Pen1" serif:id="Pen"/><g id="clock"/><g id="external-link"/><g id="hr"/><g id="info"/><g id="warning"/><g id="plus-circle"/><g id="minus-circle"/><g id="vue"/><g id="cog"/><g id="logo"/><g id="radio-check"/><g id="eye-slash"/><g id="eye"/><g id="toggle-off"/><g id="shredder"/><g id="spinner--loading--dots-" serif:id="spinner [loading, dots]"/><g id="react"/><g id="check-selected"/><g id="turn-off"/><g id="code-block"/><g id="user"/><g id="coffee-bean"/><g id="coffee-beans"><g id="coffee-bean1" serif:id="coffee-bean"/></g><g id="coffee-bean-filled"/><g id="coffee-beans-filled"><g id="coffee-bean2" serif:id="coffee-bean"/></g><g id="clipboard"/><g id="clipboard-paste"/><g id="clipboard-copy"/><g id="Layer1"/></g></svg>
+    </button>
+    <a href="user_manual.html" class="button-link">Daedalus</a>
     <button onclick="showSection('airfoil')">Airfoil Designer</button>
     <a href="wing_designer.html" class="button-link">Wing Designer</a>
     <a href="changelog.html" class="button-link">Changelog</a>
@@ -48,7 +51,7 @@ along with Deadalus.  If not, see <http://www.gnu.org/licenses/>.
   <!-- Main App Area -->
   <div class="container">
     <!-- Sidebar Menu -->
-    <nav class="sidebar">
+    <nav class="sidebar" id="navSidebar">
       <h3>Contents</h3>
 
       <ul id="menu-airfoil" class="context-menu">
@@ -84,7 +87,7 @@ along with Deadalus.  If not, see <http://www.gnu.org/licenses/>.
               <li>Parameters tabele</li>
             </ul>
           </p>
-          <img src="assets/AirfoilDesigner/airfoil_designer_elements.jpg" alt="Airfoil Designer Elements" height="500"/>
+          <img src="assets/AirfoilDesigner/airfoil_designer_elements.jpg" alt="Airfoil Designer Elements" style="height: 60vw; max-height: 400px;"/>
         </div>
 
         <div id="ADMenuBar">
@@ -137,7 +140,7 @@ along with Deadalus.  If not, see <http://www.gnu.org/licenses/>.
               <li><b>Construction:</b> show a connection between control points</li>
               <li><b>Wireframe:</b> show a spline shape created from control points</li>
             </ul>
-          <img src="assets/AirfoilDesigner/AD_Viewport.jpg" alt="Airfoil Designer Elements" height="500"/>
+          <img src="assets/AirfoilDesigner/AD_Viewport.jpg" alt="Airfoil Designer Elements" style="height: 45vh; max-height: 400px;"/>
         </div>
         
         <div id="ADArfTree">
@@ -151,7 +154,7 @@ along with Deadalus.  If not, see <http://www.gnu.org/licenses/>.
               <li><b>Creation Date:</b> shows a date of airfoil creation</li>
               <li><b>Description:</b> show a description atttached to airfoil</li>
             </ul>
-          <img src="assets/AirfoilDesigner/AD_Storage.png" alt="Airfoil Designer Elements" height="500"/>
+          <img src="assets/AirfoilDesigner/AD_Storage.png" alt="Airfoil Designer Elements" style="height: 45vh; max-height: 400px;"/>
         </div>
         
         <div id="ADParamTab">
@@ -172,13 +175,23 @@ along with Deadalus.  If not, see <http://www.gnu.org/licenses/>.
             <li><strong>LMB+Ctrl:</strong> 0.01</li>
           </ul>
           </p>
-          <img src="assets/AirfoilDesigner/AD_ParamTable.png" alt="Airfoil Designer Elements" height="500"/><br>
+          <img src="assets/AirfoilDesigner/AD_ParamTable.png" alt="Airfoil Designer Elements" style="height: 45vh; max-height: 400px;"/><br>
 
         </div>
         
       </div>
 
 <script>
+  const navSidebar = document.getElementById("navSidebar");
+
+  function openNav(e){
+      if (navSidebar.style.display === "block") {
+        navSidebar.style.display = "none";
+      } else {
+        navSidebar.style.display = "block";
+      }
+  }
+
   function showSection(sectionId) {
     // Hide all sections
     document.querySelectorAll('.page-section').forEach(el => el.classList.remove('active'));

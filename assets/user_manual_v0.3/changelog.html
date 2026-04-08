@@ -1,20 +1,20 @@
 <!--
 Copyright (C) 2025 Jakub Kamyk
 
-This file is part of Deadalus.
+This file is part of Daedalus.
 
-Deadalus is free software: you can redistribute it and/or modify
+Daedalus is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation; either version 3 of the License, or
 (at your option) any later version.
 
-Deadalus is distributed in the hope that it will be useful,
+Daedalus is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
-along with Deadalus.  If not, see <http://www.gnu.org/licenses/>.
+along with Daedalus.  If not, see <http://www.gnu.org/licenses/>.
 -->
 
 <!DOCTYPE html>
@@ -33,14 +33,17 @@ along with Deadalus.  If not, see <http://www.gnu.org/licenses/>.
   <header>
       <img src="assets/logo.png" alt="Program Logo" height="40"/>
       <div>
-        <p style="font-size: xx-large; margin-top: 0px; margin-bottom: 0px;">Deadalus User Manual</p>
-        <p style="font-size: smaller; margin-top: 0px; margin-bottom: 0px;">for the version: v0.3.2beta</p>
+        <h1>Daedalus User Manual</h1>
+        <p style="font-size: smaller; margin-top: 0px; margin-bottom: 0px;">for the version: v0.3 beta</p>
       </div>
   </header>
 
   <!-- Top Navigation Menu -->
   <div class="section-menu">
-    <a href="user_manual.html" class="button-link">Deadalus</a>
+    <button onclick="openNav()" class="nav-btn" id="btnNav">
+      <svg fill="#fff" width="32px" height="32px" viewBox="0 0 2.56 2.56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><path id="Icons" x="-128" y="-192" width="1280" height="800" style="fill:none;" d="M-5.12 -7.68h51.2v32h-51.2z"/><g id="Icons1" serif:id="Icons"><g id="Strike"/><g id="H1"/><g id="H2"/><g id="H3"/><g id="list-ul"/><g id="hamburger-1"/><g id="hamburger-2"/><g id="list-ol"/><g id="list-task"/><g id="trash"/><g id="vertical-menu"/><g id="horizontal-menu"/><g id="sidebar-2"><path d="M2 2.242H0.561a0.24 0.24 0 0 1 -0.24 -0.24V0.562a0.24 0.24 0 0 1 0.24 -0.24h1.44a0.24 0.24 0 0 1 0.24 0.24v1.44a0.24 0.24 0 0 1 -0.24 0.24m-1.039 -0.16v-1.6H0.601a0.12 0.12 0 0 0 -0.12 0.12v1.361a0.12 0.12 0 0 0 0.12 0.12zm1 -1.6h-0.841v1.6h0.84a0.12 0.12 0 0 0 0.12 -0.12V0.601a0.12 0.12 0 0 0 -0.12 -0.12"/><path x="14.611" y="16.042" width="6.569" height="2" style="fill-rule:nonzero;" d="M0.584 0.642h0.263v0.08H0.584z"/><path x="14.611" y="24.042" width="6.569" height="2" style="fill-rule:nonzero;" d="M0.584 0.962h0.263v0.08H0.584z"/><path x="14.611" y="20.042" width="6.569" height="2" style="fill-rule:nonzero;" d="M0.584 0.802h0.263v0.08H0.584z"/></g><g id="Pen"/><g id="Pen1" serif:id="Pen"/><g id="clock"/><g id="external-link"/><g id="hr"/><g id="info"/><g id="warning"/><g id="plus-circle"/><g id="minus-circle"/><g id="vue"/><g id="cog"/><g id="logo"/><g id="radio-check"/><g id="eye-slash"/><g id="eye"/><g id="toggle-off"/><g id="shredder"/><g id="spinner--loading--dots-" serif:id="spinner [loading, dots]"/><g id="react"/><g id="check-selected"/><g id="turn-off"/><g id="code-block"/><g id="user"/><g id="coffee-bean"/><g id="coffee-beans"><g id="coffee-bean1" serif:id="coffee-bean"/></g><g id="coffee-bean-filled"/><g id="coffee-beans-filled"><g id="coffee-bean2" serif:id="coffee-bean"/></g><g id="clipboard"/><g id="clipboard-paste"/><g id="clipboard-copy"/><g id="Layer1"/></g></svg>
+    </button>
+    <a href="user_manual.html" class="button-link">Daedalus</a>
     <a href="airfoil_designer.html" class="button-link">Airfoil Designer</a>
     <a href="wing_designer.html" class="button-link">Wing Designer</a>
     <button onclick="('changelog')">Changelog</button>
@@ -49,7 +52,7 @@ along with Deadalus.  If not, see <http://www.gnu.org/licenses/>.
   <!-- Main App Area -->
   <div class="container" style="display: flex; flex-direction: row;">
     <!-- Sidebar Menu -->
-    <nav class="sidebar">
+    <nav class="sidebar" id="navSidebar">
       <h3>Contents</h3>
     </nav>
 
@@ -62,7 +65,22 @@ along with Deadalus.  If not, see <http://www.gnu.org/licenses/>.
 
   <!-- ✏️ Paste and edit your changelog here -->
   <script id="markdown-source" type="text/plain">
-@ Deadalus v0.3.2beta
+@ Daedalus v0.3.3beta
+
+## Bugfixing
+
+### Wing Designer
+
+#### Input value
+*Input value* function which was suppoesd to allow data from user input rather than arrows has been repaired. The input area now accepts and saves the values.
+
+#### Scaling of a segment
+There was an issue with scaling of a segment in Wing Designer. 
+The airfoil was supposed to only scale down in a 2D plane (XY) but it also scaled in Z direction. 
+Now when scaling down or up the Z position is preserved.
+
+---
+@ Daedalus v0.3.2beta
 
 ## Bugfixing
 ### Airfoil Designer
@@ -81,7 +99,7 @@ User Manual has been updated giving the basic info about program and its modules
 More info has been given about modules with pictures and some tips that may have been hidden from the user.
 
 ---
-@ Deadalus v0.3.1beta
+@ Daedalus v0.3.1beta
 
 ## Bugfixing
 
@@ -96,9 +114,9 @@ Hopefully a program is now more crash resistant.
 ... and probably added new bugs
 
 ---
-@ Deadalus v0.3.0beta
+@ Daedalus v0.3.0beta
 
-Small rebranding to _Deadalus_. Less corporate name. As it is well know Deadalus (greek mythos hero) was the designer and the first person to create wing. Now you can do so!
+Small rebranding to _Daedalus_. Less corporate name. As it is well know Daedalus (greek mythos hero) was the designer and the first person to create wing. Now you can do so!
 **Possible STEP file export!**
 
 ## Program
@@ -168,7 +186,7 @@ Shows parameters of objects. More in sure manual.
 Program should be more stable than previous v0.1.0 release. But feel free to notify me if anything doesnt work as expected. Have a great time creating something new!
 
 ---
-@ Deadalus v0.2.X beta
+@ Daedalus v0.2.X beta
 
 ---
 
@@ -189,7 +207,7 @@ Program should be more stable than previous v0.1.0 release. But feel free to not
   - **Open**: Opens an existing project from a `db.tgz` database.  
   - **Save**: Saves the current project to `db.tgz`, containing:
     - All airfoil parameters (`.arf` files)  
-    - Program and wing parameters (`.Deadalus` file)  
+    - Program and wing parameters (`.Daedalus` file)  
 
 - **Edit Menu**
   - **Create**: Creates a new airfoil.  
@@ -212,9 +230,9 @@ Program should be more stable than previous v0.1.0 release. But feel free to not
   - **Preferences**: Opens the Preferences window to adjust program settings.  
 
 ---
-@ Deadalus v0.1.X beta
+@ Daedalus v0.1.X beta
 
-More like a absolute minimum to showcase functionality for designing own airfoils. In this version program is stable in Airfoil Designer, and the functionaliy of Wing Workbench is kept as a teaser raher than function.  Project is available at the old name AirFLOW which is no longer the case as "Deadalus" will be an official projects name.
+More like a absolute minimum to showcase functionality for designing own airfoils. In this version program is stable in Airfoil Designer, and the functionaliy of Wing Workbench is kept as a teaser raher than function.  Project is available at the old name AirFLOW which is no longer the case as "Daedalus" will be an official projects name.
 
 ## Airfoil Designer
 Airfoil Designer allows to create own profiles using parameters. Parameters are displayed inside a table and using arrows user can change the value. Nominal delta is 0.1 unit but holding SHIFT unit is 1 and CTRL unit is 0.01. 
@@ -289,6 +307,15 @@ Please be forgiving and stay positive :D
 </div>
 
 <script>
+  const navSidebar = document.getElementById("navSidebar");
+
+  function openNav(e){
+      if (navSidebar.style.display === "block") {
+        navSidebar.style.display = "none";
+      } else {
+        navSidebar.style.display = "block";
+      }
+  }
 
     function openSubPage(link) {
     // Hide all sections
