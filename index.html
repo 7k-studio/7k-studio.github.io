@@ -1,181 +1,198 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <link rel="stylesheet" href="styles.css">
-  <script src="scripts.js" defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>DEADALUS</title>
+
+<link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+<a href="#main" class="skip-link">Skip to content</a>
+<div class="topline"></div>
 
-<!-- Navbar -->
-<div class="navbar">
-  <a href="#home">Home</a>
-  <a href="#about">About</a>
-  <a href="#airfoil-designer">Airfoil Designer</a>
-  <a href="#wing-designer">Wing Designer</a>
-  <a href="#download">Download</a>
-  <a href="#mission">Mission</a>
-  <a href="assets/user_manual_v0.3/user_manual.html">User Manual</a>
-  <a href="https://github.com/7k-studio/Daedalus" class="navbar-logo"><img src="assets/GitHub_Logos/GitHub Logos/SVG/GitHub_Invertocat_White_Clearspace.svg" alt="GitHub"></a>
-</div>
+<!-- Global site navigation handled by JS-->
 
-<!-- Hero -->
-<div class="hero-image" id="home">
-  <div class="hero-text">
-    <h1>Daedalus v0.3.4-beta</h1>
-    <p>Parametric airfoil & wing designer<br>With final v0.3 bug fixing</p>
-    <div class="hero-buttons">
-      <a class="btn btn-primary" href="https://github.com/7k-studio/Daedalus/releases/tag/v0.3.4">Download</a>
-      <a class="btn btn-outline" href="assets/user_manual_v0.3/user_manual.html">User Manual</a>
-    </div>
-  </div>
-</div>
-
-<!-- Overview -->
-<div class="section" id="about">
-  <img src="assets\logo.png" alt="Daedalus Logo" style="display:flex; justify-content: center; width: 20vh; ">
-  <h2>What is Daedalus?</h2>
-  <p style="text-align:center; max-width:800px; margin: 0 auto;">
-    Daedalus is a parametric airfoil and wing design tool. Thanks to parametric design a user gets full flexibility over created geometry. 
-    It applies for both 2D and 3D design, which can be than exported to industry-standard formats like <strong>.dxf</strong> and <strong>.step</strong>.
-  </p>
-
-  <div class="row" style="margin-top:40px;">
-    <div class="card" style="text-align: center;">
-      <h3>Parametric Wing Modeling</h3>
-      <p>Define geometry through parameters for total design freedom.</p>
-    </div>
-    <div class="card" style="text-align: center;">
-      <h3>2D & 3D Designs</h3>
-      <p>Generate both planform and full 3D wing structures.</p>
-    </div>
-    <div class="card" style="text-align: center;">
-      <h3>DXF & STEP Export</h3>
-      <p>Seamlessly export to CAD with support for .dxf and .step formats.</p>
-    </div>
-  </div>
-</div>
-
-<div class="section" id="News">
-  <h2>News, Announcements & Updates</h2>
-  <a class="news" id="future_of_v0.3" style="color: #000; text-decoration: none; max-width:800px; padding: 5px; display: flex; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); margin: 0 auto;" href="news/future_of_v0.3.html">
-    <img src="news/assets/future_of_v0.3/splash_v0.4.png" alt="Daedalus Logo" style="display:flex; justify-content: center; justify-self: center; width: 10vh; height: 11vh; align-self: center;">
-    <div style="padding: 7px;">
-      <h3>The version 0.3 will grey out, but the future will bring some colors</h3>
-      <label style="font-size: 0.8em;">07.04.2026</label>
-      <p style="text-align:left; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-      It has been quite a fascinating time. On October 2025, I presented the first usable version of the Daedalus program: v0.3. 
-      For the first time it allowed for the absolute minimum required to design a 3D wing or 2D profile. 
-      With a basic tools and widgets it was possible to create a project. 
-      An interactive OpenGL viewport replaced MapPlotLib in Airfoil Designer and a viewport in Wing Designer works now more like industry standard.
-    </p>
-    </div>
-    
-  </a>
-  
-</div>
-
-<div class="section" id="airfoil-designer" style="background-color: var(--soft);">
-  <div class="container">
-  <div class="header">
-    <h2 style="text-align:left;">Airfoil Designer</h2>
-  </div>
-  <div class="body">
-    <div class="text">
-      <p style="text-align:left; margin-bottom: revert;">  
-        Airfoil Designer inside DAEDALUS allows for parametric design of airfoils.
-        A profile is established using 4 splines geometries for Pressure & Suction Side and Leading & Trailing Edges.
-        Using parameters such as: chord, incidence, leading edge thickness, pressure side angle user can achieve any desired shape.
-        It is also possible to display reference from an airfoil saved in selig format.
-        Using Airfoil Designer it is possible to export to <strong>.dxf</strong> file format.
-        </p>
-        <a class="btn btn-primary" href="assets/user_manual_v0.3/airfoil_designer.html">Learn More</a>
-      </div>
-      
-      <div class="section-image">
-        <img src="assets\airfoil_designer.png" alt="Airfoil Designer">
+<main id="main">
+  <section id="home">
+    <div class="hero">
+      <div class="wrap">
+        <div class="kicker">DAEDALUS // BUILD 0.4</div>
+        <h1>DAEDALUS<br><span class="accent">v0.4.0-beta</span></h1>
+        <p>Get in shape with v0.4.0</p>
+        <div class="actions">
+          <a class="btn primary" href="https://github.com/7k-studio/Daedalus/releases/tag/v0.4.0">DOWNLOAD ↗</a>
+          <a class="btn" href="pages/manual/v04.html">GET STARTED</a>
+        </div>
       </div>
     </div>
-    </div>
-  </div>
-
-<div class="section" id="wing-designer" style="background-color: var(--soft);">
-  <div class="container">
-  <div class="header">
-    <h2 style="text-align:right;">Wing Designer</h2>
-  </div>
-  <div class="body">
-    <div class="section-image">
-      <img src="assets\wing_workbench.png" alt="Airfoil Designer">
-    </div>
-    <div style="text-align:right;">
-      <p style="text-align:right; margin-bottom: revert;">
-        Wing Designer allows for creation of 3D wings using established profiles from Airfoil Designer and NURBS surfaces.
-        A user can create:
-        <br><strong>Component</strong> - a family of other objects, just like 'Front Wing'
-        <br><strong>Wings</strong> - single object created out of segments, just like '1st wing'
-        <br><strong>Segments</strong> - an object holding shape of a wing, just like 'Ribs'<br>
-        By changing the parameters position, angle and scale can be adjusted. Additionally a connection type: <strong>G0</strong>, <strong>G1</strong> can be defined between semgnets to allows linear or smooth surface flow.
-        Using Wing Designer it is possible to export to <strong>.step</strong> file format*.
+  </section>
+  <section>
+    <div class="wrap" id="about">
+      <img src="assets\logo.png" alt="Daedalus Logo" style="display:flex; justify-self: center; width: 20vh; filter: drop-shadow(0px 8px 8px var(--amber));">
+      <h2>What is Daedalus?</h2>
+      <p>
+        Daedalus is a Python-based parametric CAD environment for exploring airfoil geometry and designing wings. 
+        User gets full flexibility over created geometry. 
+        It applies for both 2D and 3D design, which can be than exported to industry-standard formats like <strong>.dxf</strong> and <strong>.step</strong>.
       </p>
-      <p style="text-align:right; font-size:10px; margin-bottom: revert;">*Tested using CATIA V5R19, Inventor 2025, SolidWorks 2025</p>
-      <a class="btn btn-primary" href="assets/user_manual_v0.3/wing_designer.html">Learn More</a>
+
+      <div class="feature-grid">
+          <article class="feature">
+            <small>01 // FREEDOM</small>
+            <h3>Parametric Wing Modeling</h3>
+            <p>Define geometry through parameters for total design freedom.</p>
+            <!-- <a href="#airfoil">OPEN MODULE →</a> -->
+          </article>
+          <article class="feature">
+            <small>02 // ADAPTIVE</small>
+            <h3>2D & 3D Designs</h3>
+            <p>Generate both 2D airfoil curves or full 3D wing surfaces</p>
+            <!-- <a href="#wing">OPEN MODULE →</a>-->
+          </article>
+          <article class="feature">
+            <small>03 // COMPATIBLE</small>
+            <h3>DXF & STEP Export</h3>
+            <p>Seamlessly export to CAD with support for .dxf and .step formats</p>
+            <!-- <a href="#manual">OPEN MANUAL →</a> -->
+          </article>
+        </div>
     </div>
   </div>
-  </div>
-</div>
 
-<div class="section" id="download" style="background-color: var(--white); display: flex; flex-direction: row; justify-content: center; gap: 50px;">
-<div>
-  <h2 style="color: var(--darker);">Get your copy of the program</h2>
-  <p>
-    <a class="btn btn-primary" href="https://github.com/7k-studio/Daedalus/releases/download/v0.3.4/Daedalus_v0.3.4-beta.zip" style="border-radius: 55px 15px;">Daedalus v0.3.3beta for Windows</a>
-  </p>
-</div>
-<div>
-  <h2 style="color: var(--darker);">Realease Notes</h2>
-  <p>
-    <a class="btn btn-primary" href="https://github.com/7k-studio/Daedalus/releases" style="border-radius: 15px 55px;">Realease Notes</a>
-  </p>
-</div>
-</div>
-
-<div class="section" id="mission" style="background-color: var(--light); flex-direction: row;">
-  <div class="blocks" style="width: 35%; border-radius: 55px 15px;">
-    <header>Project Mission</header>
-    <p style="text-align:left;">
-      Daedalus is an GNU program created by single author (with a help of awesome friends).
-      In the pursuit of better aerodynamic designs, a niche was found.<br>
-
-      Designing an airfoil and wings in typical modern CAD software is hard. Not impossible, of course, but far from pleasant. 
-      To ease this process, DAEDALUS was created. It`s aimed primarily at Formula Student colleagues, but it can be used for small aircraft as well.
-    
-      DAEDALUS is a free sofware. It's to promote the best science branch of them all: aerodynamics and to allow creative minds to move forward without being held back by software.
-    </p>
+  <div class="wrap container" id="airfoil">
+    <div class="kicker">MODULE // AIRFOIL</div>
+    <div class="module-layout">
+      <div class="section-image">
+        <img src="assets\airfoil.svg" height="384px" alt="Airfoil Designer">
+      </div>
+      <div style="color: var(--muted);">
+        <h2 >AIRFOIL<br><span class="accent">DESIGNER.</span></h2>
+        <p>Airfoil Designer inside DAEDALUS allows for parametric design of airfoils.
+            A profile is established using 4 splines geometries for Pressure & Suction Side and Leading & Trailing Edges.
+            Using parameters such as: chord, incidence, leading edge thickness, pressure side angle user can achieve any desired shape.
+            It is also possible to display reference from an airfoil saved in selig format.
+            Using Airfoil Designer it is possible to export to <strong>.dxf</strong> file format.</p>
+        <div class="actions">
+          <a class="btn primary" href="pages/manual/v04.html#manual/airfoil-overview">READ AIRFOIL WIKI ↗</a>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="blocks" style="width: 55%; border-radius: 15px 50px;">
-    <header>Licence</header>
-    DAEDALUS is free software. You can redistribute it and/or modify it under the terms of the 
-    <a style="color: #000;" href="https://www.gnu.org/licenses/gpl-3.0.html">GNU licence</a> (GPL, or “free software”). 
-    This license grants people a number of freedoms:
-    <li style="margin-left: 20px">Freedom to use Daedalus, for any purpose</li>
-    <li style="margin-left: 20px">Freedom to distribute Daedalus</li>
-    <li style="margin-left: 20px">Freedom to study source code and modify it</li>
-    <li style="margin-left: 20px">Freedom to distribute changed versions of Daedalus</li>
-    The GPL strictly aims at protecting these freedoms, requiring everyone to share their modifications when they also share the software in public. 
-    That aspect is commonly referred to as Copyleft.
-
-    DAEDALUS is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-
-    The Author is committed to preserving DAEDALUS as free software.
+  <div class="wrap container" id="airfoil">
+    <div class="kicker">MODULE // WING</div>
+    <div class="module-layout">
+      <div style="color: var(--muted);">
+        <h2>WING<br><span class="accent">DESIGNER.</span></h2>
+        <p>Wing Designer allows for creation of 3D wings using established profiles from Airfoil Designer and NURBS surfaces.
+        A user can create:</p>
+        <div class="component-flow" aria-label="Components are combined into wings and segments">
+          <div class="flow-step">COMPONENTS</div>
+          <div class="flow-arrow" aria-hidden="true">&gt;</div>
+          <div class="flow-step">WINGS</div>
+          <div class="flow-arrow" aria-hidden="true">&gt;</div>
+          <div class="flow-step">SEGMENTS</div>
+        </div>
+        <p>By changing the parameters position, angle and scale can be adjusted. Additionally a connection type: <strong>G0</strong>, <strong>G1</strong> can be defined between semgnets to allows linear or smooth surface flow.
+        Using Wing Designer it is possible to export to <strong>.step</strong> file format*.</p>
+        <p style="text-align:right; font-size:10px; margin-bottom: revert;">*Tested using CATIA V5R19, Inventor 2025, SolidWorks 2025</p>
+        <div class="actions">
+          <a class="btn primary" href="pages/manual/v04.html#manual/wing-overview">READ WING WIKI ↗</a>
+        </div>
+      </div>
+      <div class="section-image">
+        <img src="assets\wing.svg" height="384px" alt="Wing Designer">
+      </div>
+    </div>
   </div>
-</div>
+  <div class="section" id="download" style="background: var(--panel);">
+    <div class="wrap download-section">
+      <div class="download-option">
+        <h2>Get your copy of the program</h2>
+        <p>
+          <a class="btn primary" href="https://github.com/7k-studio/Daedalus/releases/download/v0.4.0/Daedalus_v0.4.0-beta.zip">Daedalus v0.4.0-beta for Windows</a>
+        </p>
+      </div>
+      <div class="download-option">
+        <h2>Release notes</h2>
+        <p>
+          <a class="btn primary" href="https://github.com/7k-studio/Daedalus/releases">Browse all releases</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
-<footer>
-  <div class="footer-note">Spread your wings with Daedalus!</div>
-</footer>
+<section class="section" id="News" style="margin-top: 0px;">
+  <h2>News, Announcements & Updates</h2>
+  <div class="news-grid">
+    <a class="news" id="v04_on_the_horizon" href="news/v04_on_the_horizon.html">
+      <img src="news/assets/future_of_v0.3/splash_v0.4.png" alt="">
+      <div class="news-content">
+        <h3>The version 0.4 is on the horizon</h3>
+        <time datetime="2026-09-28">28.09.2026</time>
+        <p>
+        Since the last update there has been a true redesign underneath the Deadalus program.
+        One changed triggered another. What started as just an improvement of the airfoil design process ended up with need to redesign whole wing structure.
+        Redesigning geoemtries caused new challenges to appear.
+        At the same time, it was decided to swith from no longeer supported PyQt5 to PyQt6.
+        This an other [what felt like] small changes caused an avalange almost a year long.
+        </p>
+      </div>
+    </a>
 
+    <a class="news" id="future_of_v0.3" href="news/future_of_v0.3.html">
+      <img src="news/assets/future_of_v0.3/splash_v0.4.png" alt="">
+      <div class="news-content">
+        <h3>The version 0.3 will grey out, but the future will bring some colors</h3>
+        <time datetime="2026-04-07">07.04.2026</time>
+        <p>
+        It has been quite a fascinating time. On October 2025, I presented the first usable version of the Daedalus program: v0.3. 
+        For the first time it allowed for the absolute minimum required to design a 3D wing or 2D profile. 
+        With a basic tools and widgets it was possible to create a project. 
+        An interactive OpenGL viewport replaced MapPlotLib in Airfoil Designer and a viewport in Wing Designer works now more like industry standard.
+        </p>
+      </div>
+    </a>
+  </div>
+</section>
+
+  <section id="mission">
+    <div class="wrap mission-wrap">
+      <div class="kicker">LICENCE // MISSION</div>
+      <h2 class="mission-heading">PROJECT PURPOSE &amp; FREEDOM</h2>
+      <div class="mission-grid">
+        <blockquote>
+          <h3>01 / MISSION</h3>
+          <p>Daedalus is a GNU program created by a single author, with help from awesome friends. In the pursuit of better aerodynamic designs, a niche was found.</p>
+          <p>Designing airfoils and wings in typical modern CAD software can be hard and far from pleasant. DAEDALUS was created to ease this process. It is aimed primarily at Formula Student colleagues, but can also be used for small aircraft.</p>
+          <p>DAEDALUS is free software: it promotes aerodynamics and helps creative minds move forward without being held back by software.</p>
+        </blockquote>
+        <blockquote>
+          <h3>02 / LICENCE</h3>
+          <p>DAEDALUS is free software. You can redistribute it and/or modify it under the terms of the <a href="https://www.gnu.org/licenses/gpl-3.0.html">GNU General Public License (GPL)</a>. This license grants people these freedoms:</p>
+          <ul>
+            <li>Use Daedalus for any purpose</li>
+            <li>Distribute Daedalus</li>
+            <li>Study and modify its source code</li>
+            <li>Distribute changed versions of Daedalus</li>
+          </ul>
+          <p>The GPL protects these freedoms by requiring shared modifications when the software is redistributed. This is commonly referred to as copyleft.</p>
+          <p>DAEDALUS is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
+          <p>The author is committed to preserving DAEDALUS as free software.</p>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script src="scripts/nav-bar.js"></script>
+<script src="scripts/index.js"></script>
+<script src="scripts/footer.js"></script>
 </body>
 </html>
