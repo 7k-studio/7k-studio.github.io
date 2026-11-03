@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark light">
+<title>DEADALUS</title>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body>
+<a href="#main" class="skip-link">Skip to content</a>
+<div class="topline"></div>
+
+<!-- Global site navigation -->
+
+<main id="main">
+
+  <!-- Wiki -->
+  <section class="page wiki" id="manual">
+    <header class="wiki-head">
+      <div>
+        <div class="kicker">KNOWLEDGE BASE // PROGRAM DOCUMENTATION</div>
+        <h1>User Manual <span class="version" style="background-color: var(--green); border: 1px solid var(--green); color: black;">V0.4</span></h1>
+      </div>
+
+      <label class="search">
+        <input id="search" type="search"
+          placeholder="Search the documentation..." aria-label="Search manual">
+        <kbd>/</kbd>
+      </label>
+    </header>
+
+    <!-- Mobile versions of the two side panels -->
+    <div class="mobile-panels">
+      <details>
+        <summary>☷ &nbsp; CHAPTER INDEX</summary>
+        <div class="panel-content chapter-tree" id="mobile-tree"></div>
+      </details>
+      <details>
+        <summary>⚙ &nbsp; READING SETTINGS</summary>
+        <div class="panel-content" id="mobile-settings"></div>
+      </details>
+    </div>
+
+    <div class="wiki-grid">
+      <aside class="sidebar desktop-side" aria-label="Chapter index">
+        <div class="panel-heading">A1 / CHAPTER INDEX</div>
+        <div class="sidebar-body chapter-tree" id="desktop-tree"></div>
+      </aside>
+
+      <article class="reader theme-paper" id="reader">
+        <div class="reader-inner">
+          <div class="breadcrumbs" id="breadcrumbs"></div>
+          <div class="article" id="article-content"></div>
+          <nav class="article-nav" aria-label="Chapter navigation">
+            <a id="previous" href="#manual">← PREVIOUS CHAPTER</a>
+            <a id="next" href="#manual">NEXT CHAPTER →</a>
+          </nav>
+        </div>
+      </article>
+
+      <aside class="settings desktop-side" aria-label="Reading settings">
+        <div class="panel-heading">A2 / READING SETTINGS</div>
+        <div class="settings-body" id="desktop-settings"></div>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<script src="../../scripts/nav-bar.js"></script>
+<script src="v0.4/manual-v04-chapters.js"></script>
+<script src="../../scripts/manual.js"></script>
+<script src="scripts/footer.js"></script>
+</body>
+</html>

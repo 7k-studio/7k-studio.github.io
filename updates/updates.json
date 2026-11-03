@@ -1,0 +1,12 @@
+[
+  {
+    "id": "first-release",
+    "type": "announcement",
+    "title": "First public release",
+    "date": "2026-11-03",
+    "version": "0.1.0",
+    "summary": "The first public version is available.",
+    "file": "content/updates/announcements/first-release.md",
+    "pinned": true
+  }
+]
