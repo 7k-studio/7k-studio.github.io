@@ -206,9 +206,18 @@ input:focus-visible, select:focus-visible {
 
 .feature-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  --col-count: 3; /* fallback */
+  grid-template-columns: repeat(var(--col-count), minmax(0, 1fr));
   gap: 12px;
   margin-top: 45px;
+}
+
+.feature-grid[data-columns="2"] {
+  --col-count: 2;
+}
+
+.feature-grid[data-columns="3"] {
+  --col-count: 3;
 }
 
 .feature {
