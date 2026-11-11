@@ -4,8 +4,8 @@ const chapters = [
     group: "Program",
     id: "program-overview",
     title: "Program overview",
+    edit_date: "2.11.2026",
     body: `
-      <div class="article-meta">00 — OVERVIEW // 2.11.2026</div>
       <p>
         Welcome to the Daedalus user manual. 
         Daedalus is a program for designing and editing airfoils and wings. 
@@ -18,7 +18,7 @@ const chapters = [
         <li>Create high quaility and fine detail geometries.</li>
         <li>Import/export airfoil files in various formats.</li>
       </ul>
-      <img src="v0.4/assets/Daedalus/STEP_export.jpg" alt="Wing Workbench" style="height: 50vw; max-height: 500px;"/>
+      <img src="v0.4/assets/Daedalus/STEP_export.jpg" alt="Wing Workbench" style="width: 100%;"/>
 
       <h2>Daedalus</h2>
       <p>Daedalus consists of two modules: <strong>2D airfoil designer</strong> and <strong>3D wing designer</strong>.
@@ -61,20 +61,47 @@ const chapters = [
     group: "Program",
     id: "program-getting-started",
     title: "Getting started",
+    edit_date: "11.11.2026",
     body: `
-      <p>Once DAEDALUS program is started user will be welcomed by Splash Screen of the program. With splash screen you can:</p>
+      <p>Once DAEDALUS program is started user will be welcomed by Home Screen of the program. Home Screen consists of Card which categorise the buttons:</p>
       <ul>
-          <li><b>Create new project:</b> Start a new project.</li>
-          <li><b>Open existing project:</b> Load an existing project file.</li>
-          <li><b>Open user manual:</b> Go directly to user manual without closing the Splash Screen</li>
-          <li><b>Open realise notes:</b> Opens web browser with latest realise notes (reqires ethernet connection)</li>
+          <li><b>New</b> allows stores 2 buttons: 1. <b>New Airfoil Design</b> - program opens in the Airfoil Module, 2. <b>New Wing Design</b> - program opens in Wing Module.</li>
+          <li><b>Open</b> if any project has been created with Daeadalus user can quickly get back to it from this level.</li>
+          <li><b>User manual</b> if help is needed an online manual can be opened from here.</li>
+          <li><b>Online Access</b> opens web browser with latest realise notes or on the Daedalus website (reqires ethernet connection)</li>
+          <li><b>Preferences</b> opens preferences windows to edit the settings before working with program.</li>
       </ul>
-      <img src="v0.4/assets/Daedalus/splashscreen.png" alt="Splash Screen" style="height: 45vh; max-height: 400px;"/> <br>`
+      <img src="v0.4/assets/home_screen.png" width="100%"> 
+      
+      <h2>New Airfoil Design</h2>
+      <p>Triggering the <i>New Airfoil Design</i> guides user directly to Airfoil Module where new airfoils can be created from scratch with precise control over the airfoils general shape and curvature.</p>
+      <p>Open a new project and a default airfoil is created. It can be accessed via Arirfoil Tree. Use available widgets to load a reference airfoil or adjust the parameters standalone to achieve the desired shape.</p>
+      <p>Once the airfoil forming is completed it can be:</p>
+      <ul>
+        <li>Assigend to any segment in the Wing Module to create 3D wing.</li>
+        <li>Saved to '.arf.ddls' format to preserve the shape and append it in different projects.</li>
+        <li>Exported to '.dxf' format and imported to any CAD software.</li>
+      </ul>
+
+      <h2>New Wing Design</h2>
+      <p>Triggering the <i>New Wing Design</i> guides user directly to Wing Module where new Wings can be created from scratch. 
+      Wings are part of components, which are spoosed to work as a wing assembly for multielement wings, wings with flaps & slots or similar. 
+      Each wing than stores the segments which are closely connected to airfoil and therefore give the wing its shape.
+      Inside Wing Module a basic Airfoil shape editing tools are available.</p>
+      <p>Open a new project and a default empty component is created. It can be accessed via Object Tree. 
+      Use available widgets to add new Wing and at least 2 segments at different spans to create 3D wing consisting of 4 surfaces. Modify the parameters of Component, Wing, Segment and Airfoil to achieve the desired shape.</p>
+      <p>Once the design of the wing is satisfactory it can be:</p>
+      <ul>
+        <li>Saved to '.ddls' format to preserve the shape parameters and settings.</li>
+        <li>Exported to '.step' format and imported to any CAD software.</li>
+      </ul>
+      `
   },
   {
     group: "Program",
     id: "program-common-widgets",
     title: "Common Widgets",
+    edit_date: "2.11.2026",
     body: `
       <p>There are 2 types of widgets in the Daedalus program. 
         <strong>Common widgets</strong> are widgets shared between the modules. 
@@ -130,7 +157,7 @@ const chapters = [
           <span>New Project</span>
         </div>
         <div style="display: grid; justify-items: center; background-color: var(--soft); padding: 8px; border-radius: 8px;">
-          <img src="v0.4/assets/IconPack/Classic/openFile.svg" height="48px">
+          <img src="v0.4/assets/IconPack/Classic/OpenFile.svg" height="48px">
           <span>Open Project</span>
         </div>
         <div style="display: grid; justify-items: center; background-color: var(--soft); padding: 8px; border-radius: 8px;">
@@ -163,26 +190,67 @@ const chapters = [
     group: "Program",
     id: "program-preferences",
     title: "Preferences & Settings",
+    edit_date: "11.11.2026",
     body: `
-      <p>Preferences window allows user to customize the program settings according to needs.<br>
-        <strong>Units</strong> - sets units <span class="highlight">FOR STEP EXPORT ONLY! (at least for now)</span>
-        <ul>
-          <li><strong>Length:</strong> allows to set length unit (for now only meters available)</li>
-          <li><strong>Angle:</strong> allows to set angle unit (for now only radians)</li>
-        </ul>
-        <strong>General performance: </strong> Allows user to choose the details level in graphics rendering. Performace level is set using slider where 10 is lowest and 100 is highest detail level.<br>
-        <img src="v0.4/assets/Daedalus/preferences_general_performance.png" alt="preferences general performance" style="height: 45vh; max-height: 400px;"/>
-
-        <h4>Beta features</h4>
-        Unlocks functions that are not well tested or stable. Used at user's own risk!
-      </p>`
+      <p>Preferences window allows user to customize the program settings according to users needs.<br> It consists of 3 tabs, one for the general settings and two for modules.</p>
+      <h2>General</h2>
+      <img src="v0.4/assets/general_preferences.png" alt="preferences general performance" style="height: 45vh; max-height: 400px;"/>
+      <p><strong>Units</strong> - sets units <span class="highlight">FOR STEP EXPORT ONLY! (at least for now)</span></p>
+      <ul>
+        <li><strong>Length:</strong> allows to set length unit (for now only meters available)</li>
+        <li><strong>Angle:</strong> allows to set angle unit (for now only radians)</li>
+      </ul>
+      <p><strong>General performance: </strong> Allows user to choose the details level in graphics rendering. Performace level is set using slider where 10 is lowest and 100 is highest detail level.</p>
+      <p><strong>Color Scheme: </strong> since v0.4 it is possible to change the color scheme of the program, for users who prefer more colorful or dark themes. Currently 4 schemes are availble.</p>
+      <ul>
+        <li><strong>Daedalus-Light</strong> specific theme design around nright colors of color pallete indended for the program. <strong>Default theme</strong></li>
+        <li><strong>Daedalus-Dark</strong> specific theme design around darker colors of color pallete indended for the program.</li>
+        <li><strong>Light</strong> plain bright scheme, default for the PyQt6 widgets with minor changes.</li>
+        <li><strong>Dark</strong> plain dark scheme based on GitHub users recommendation for PyQt6 dark themes. </li>
+      </ul>
+      <p><strong>Beta features</strong> unlocks functions that are not well tested or stable. Used at user's own risk!</p>
+      `
   },
   {
     group: "Airfoil Designer",
     id: "airfoil-overview",
     title: "Airfoil Designer overview",
+    edit_date: "7.11.2026",
     body: `
       <!-- Airfoil Designer Section -->
+      <div class="wip-panel">
+        <div class="wip-stripe"></div>
+
+        <div class="wip-content">
+          <div class="wip-icon">
+            <span>⚠</span>
+          </div>
+
+          <div class="wip-main">
+            <div class="wip-heading">
+              <span class="wip-label">DEVELOPMENT NOTICE</span>
+              <span class="wip-status">
+                <span class="wip-dot"></span>
+                WORK IN PROGRESS
+              </span>
+            </div>
+
+            <h3>This article is under development</h3>
+
+            <p>
+              This article is currently being developed and refined.
+              Some descriptions may be incomplete or subject to change.
+            </p>
+
+            <div class="wip-footer">
+              <span class="wip-code">ARTICLE // MODULE / AIRFOIL</span>
+              <span class="wip-message">SYSTEM STATUS: IN DEVELOPMENT</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="wip-stripe"></div>
+      </div>
       <div id="airfoil" class="page-section">
         <div id="ADoverview">
           <p>Airfoil designer module allows user to design, modify and export airfoils using control points and geometry tools. <br>
@@ -209,7 +277,43 @@ const chapters = [
     group: "Airfoil Designer",
     id: "airfoil-geometry",
     title: "Airfoils geometry",
-    body: `<p>Daealus first and foremost goal is to help to create detailed, high quality, parametric airfoils with preserved continutity between the establishing curves.</p>
+    edit_date: "7.11.2026",
+    body: `
+    <div class="wip-panel">
+        <div class="wip-stripe"></div>
+
+        <div class="wip-content">
+          <div class="wip-icon">
+            <span>⚠</span>
+          </div>
+
+          <div class="wip-main">
+            <div class="wip-heading">
+              <span class="wip-label">DEVELOPMENT NOTICE</span>
+              <span class="wip-status">
+                <span class="wip-dot"></span>
+                WORK IN PROGRESS
+              </span>
+            </div>
+
+            <h3>This article is under development</h3>
+
+            <p>
+              This article is currently being developed and refined.
+              Some descriptions may be incomplete or subject to change.
+            </p>
+
+            <div class="wip-footer">
+              <span class="wip-code">ARTICLE // MODULE / AIRFOIL</span>
+              <span class="wip-message">SYSTEM STATUS: IN DEVELOPMENT</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="wip-stripe"></div>
+      </div>
+
+    <p>Daealus first and foremost goal is to help to create detailed, high quality, parametric airfoils with preserved continutity between the establishing curves.</p>
 
     <p>Each airfoil is defined by set of <i><b>parameters</b></i> and <i><b>attributes</b></i>. 
     For each of four establishing splines they generate a set of points which are used as anchors and poles for the created splines. This way a curve for:</p>
@@ -462,36 +566,97 @@ const chapters = [
     group: "Airfoil Designer",
     id: "airfoil-references",
     title: "References",
+    edit_date: "11.11.2026",
     body: `
       <!-- Airfoil Designer Section -->
-      <div id="airfoil" class="page-section">
-        <div id="ADoverview">
-          <p>Airfoil designer module allows user to design, modify and export airfoils using control points and geometry tools. <br>
-            Airfoils are defined as 4 splines, each for:</p>
-            <ul>
-              <li>Pressure Side</li>
-              <li>Suction Side</li>
-              <li>Leading Edge</li>
-              <li>Trailing Edge</li>
-            </ul>
-          <p>It is belived that with such definition it would be easier to create such airfoil and ensure clean geometry to any CFD software as well as manufacturing.
-            To Help with creation of airfoil, designer consists of widgets and other elements such as:</p>
-            <ul>
-              <li>Common Widgets</li>
-              <li>Module Specific Widgets</li>
-              <li>2D Viewport with grid and ruler</li>
-              <li>Reference handling functions</li>
-              <li>Refined geometry definition</li>
-            </ul>
-          <img src="v0.4/assets/AirfoilDesigner/airfoil_designer_elements.jpg" alt="Airfoil Designer Elements" style="height: 60vw; max-height: 400px;"/>
-        </div>`
+      <div class="wip-panel">
+        <div class="wip-stripe"></div>
+
+        <div class="wip-content">
+          <div class="wip-icon">
+            <span>⚠</span>
+          </div>
+
+          <div class="wip-main">
+            <div class="wip-heading">
+              <span class="wip-label">DEVELOPMENT NOTICE</span>
+              <span class="wip-status">
+                <span class="wip-dot"></span>
+                WORK IN PROGRESS
+              </span>
+            </div>
+
+            <h3>This article is under development</h3>
+
+            <p>
+              This article is currently being developed and refined.
+              Some descriptions may be incomplete or subject to change.
+            </p>
+
+            <div class="wip-footer">
+              <span class="wip-code">ARTICLE // MODULE / AIRFOIL</span>
+              <span class="wip-message">SYSTEM STATUS: IN DEVELOPMENT</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="wip-stripe"></div>
+      </div>
+
+      <p>It is possible to load a background reference contorus in the Airfoil Designer Module. 
+      Such airfoil will appear behind the currently designed airfoil and can guide the user to modify the parameters in the way to resamble it's shape or compare one to another.
+      Reference airfoil will not be a part of export or will not be saved in the project therefore on restart repeated import is required.</p>
+      <h2>Importing the references</h2>
+      <p>It is possible to load as a reference following airfoil format:</p>
+      <ul>
+        <li><strong>XY-point</strong> - a point cloud/XY points/selig format is a well known format for airfoil shape storage. Download it from any databes and load to the Daedalus as reference.</li>
+        <li><strong>Daedalus v0.3 .arf</strong> - a save format form previous version Daedalus program. Since airfoil definition has changed and load-up from old format file may be corrupted it is possible to check imported geometery with reference. (Reference is loaded and rendered with old algorythm to ensure the same shape)</li>
+        <li><strong>Daedalus v0.4 .arf.ddls</strong> - any airfoil saved standalone can be imported as reference.</li>
+      </ul>
+      <h2>Removing references</h2>
+      <h2>Editing references</h2>
+      `
   },
   {
     group: "Airfoil Designer",
     id: "airfoil-widgets",
     title: "Widgets overview",
+    edit_date: "7.11.2026",
     body: `
       <!-- Airfoil Designer Section -->
+      <div class="wip-panel">
+        <div class="wip-stripe"></div>
+
+        <div class="wip-content">
+          <div class="wip-icon">
+            <span>⚠</span>
+          </div>
+
+          <div class="wip-main">
+            <div class="wip-heading">
+              <span class="wip-label">DEVELOPMENT NOTICE</span>
+              <span class="wip-status">
+                <span class="wip-dot"></span>
+                WORK IN PROGRESS
+              </span>
+            </div>
+
+            <h3>This article is under development</h3>
+
+            <p>
+              This article is currently being developed and refined.
+              Some descriptions may be incomplete or subject to change.
+            </p>
+
+            <div class="wip-footer">
+              <span class="wip-code">ARTICLE // MODULE / AIRFOIL</span>
+              <span class="wip-message">SYSTEM STATUS: IN DEVELOPMENT</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="wip-stripe"></div>
+      </div>
       <p></p>
 
       <h2 id="ADMenuBar">Menu Bar overview</h2>
@@ -588,7 +753,41 @@ const chapters = [
     group: "Airfoil Designer",
     id: "airfoil-fit2ref",
     title: "Fit to references",
+    edit_date: "2.11.2026",
     body: `
+    <div class="wip-panel">
+        <div class="wip-stripe"></div>
+
+        <div class="wip-content">
+          <div class="wip-icon">
+            <span>⚠</span>
+          </div>
+
+          <div class="wip-main">
+            <div class="wip-heading">
+              <span class="wip-label">DEVELOPMENT NOTICE</span>
+              <span class="wip-status">
+                <span class="wip-dot"></span>
+                WORK IN PROGRESS
+              </span>
+            </div>
+
+            <h3>This article is under development</h3>
+
+            <p>
+              This article is currently being developed and refined.
+              Some descriptions may be incomplete or subject to change.
+            </p>
+
+            <div class="wip-footer">
+              <span class="wip-code">ARTICLE // MODULE / AIRFOIL</span>
+              <span class="wip-message">SYSTEM STATUS: IN DEVELOPMENT</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="wip-stripe"></div>
+      </div>
       <p>
       This guide explains how to use <b>Fit Airfoil to Reference</b> function in the Airfoil Designer to make a Daedalus parametric airfoil follow a reference imported from <b>XY-point cloud</b>.
       </p>
@@ -706,8 +905,42 @@ const chapters = [
     group: "Wing Designer",
     id: "wing-overview",
     title: "Wing Designer overview",
+    edit_date: "2.11.2026",
     body: `
       <!-- Wing Workbench Section -->
+      <div class="wip-panel">
+        <div class="wip-stripe"></div>
+
+        <div class="wip-content">
+          <div class="wip-icon">
+            <span>⚠</span>
+          </div>
+
+          <div class="wip-main">
+            <div class="wip-heading">
+              <span class="wip-label">DEVELOPMENT NOTICE</span>
+              <span class="wip-status">
+                <span class="wip-dot"></span>
+                WORK IN PROGRESS
+              </span>
+            </div>
+
+            <h3>This article is under development</h3>
+
+            <p>
+              This article is currently being developed and refined.
+              Some descriptions may be incomplete or subject to change.
+            </p>
+
+            <div class="wip-footer">
+              <span class="wip-code">ARTICLE // MODULE / WING</span>
+              <span class="wip-message">SYSTEM STATUS: IN DEVELOPMENT</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="wip-stripe"></div>
+      </div>
       <div id="wing" class="page-section active">
         <div id="WDoverview">
           <p>Assemble full wings from created / established in Airfoil Designer profiles.
@@ -734,7 +967,41 @@ const chapters = [
     group: "Wing Designer",
     id: "wing-widgets",
     title: "Widgets overview",
+    edit_date: "2.11.2026",
     body: `
+    <div class="wip-panel">
+        <div class="wip-stripe"></div>
+
+        <div class="wip-content">
+          <div class="wip-icon">
+            <span>⚠</span>
+          </div>
+
+          <div class="wip-main">
+            <div class="wip-heading">
+              <span class="wip-label">DEVELOPMENT NOTICE</span>
+              <span class="wip-status">
+                <span class="wip-dot"></span>
+                WORK IN PROGRESS
+              </span>
+            </div>
+
+            <h3>This article is under development</h3>
+
+            <p>
+              This article is currently being developed and refined.
+              Some descriptions may be incomplete or subject to change.
+            </p>
+
+            <div class="wip-footer">
+              <span class="wip-code">ARTICLE // MODULE / WING</span>
+              <span class="wip-message">SYSTEM STATUS: IN DEVELOPMENT</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="wip-stripe"></div>
+      </div>
         <div id="WDMenuBar">
           <h2>Menu Bar overview</h2>
           <h3>File menu</h3>

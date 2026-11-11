@@ -318,13 +318,24 @@ function renderChapter(id, subsectionId = null, expandSubsections = false) {
 
   const chapter = chapters[index];
   currentChapter = id;
-  $("#article-content").innerHTML = chapter.body;
-  if (!$("#article-content h1")) {
+  const articleContent = $("#article-content");
+  articleContent.innerHTML = chapter.body;
+
+  let articleMeta = $(".article-meta", articleContent);
+  if (chapter.edit_date != null) {
+    if (!articleMeta) {
+      articleMeta = document.createElement("div");
+      articleMeta.className = "article-meta";
+    }
+    articleMeta.textContent = `LAST EDIT // ${chapter.edit_date}`;
+    articleContent.prepend(articleMeta);
+  }
+
+  if (!$("h1", articleContent)) {
     const articleTitle = document.createElement("h1");
     articleTitle.textContent = chapter.title;
-    const articleMeta = $(".article-meta", $("#article-content"));
     if (articleMeta) articleMeta.after(articleTitle);
-    else $("#article-content").prepend(articleTitle);
+    else articleContent.prepend(articleTitle);
   }
 
   $("#breadcrumbs").innerHTML = `
