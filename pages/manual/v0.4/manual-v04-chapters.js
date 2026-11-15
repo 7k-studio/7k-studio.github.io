@@ -218,39 +218,42 @@ const chapters = [
     edit_date: "7.11.2026",
     body: `
       <!-- Airfoil Designer Section -->
-      <div class="wip-panel">
-        <div class="wip-stripe"></div>
+      <div class="message-card" purpose="warning">
+      <div class="message-stripe"></div>
 
-        <div class="wip-content">
-          <div class="wip-icon">
-            <span>⚠</span>
-          </div>
-
-          <div class="wip-main">
-            <div class="wip-heading">
-              <span class="wip-label">DEVELOPMENT NOTICE</span>
-              <span class="wip-status">
-                <span class="wip-dot"></span>
-                WORK IN PROGRESS
-              </span>
-            </div>
-
-            <h3>This article is under development</h3>
-
-            <p>
-              This article is currently being developed and refined.
-              Some descriptions may be incomplete or subject to change.
-            </p>
-
-            <div class="wip-footer">
-              <span class="wip-code">ARTICLE // MODULE / AIRFOIL</span>
-              <span class="wip-message">SYSTEM STATUS: IN DEVELOPMENT</span>
-            </div>
-          </div>
+      <div class="message-content">
+        <div class="message-icon">
+          <span>⚠</span>
         </div>
 
-        <div class="wip-stripe"></div>
+        <div class="message-main">
+          <div class="message-heading">
+            <span class="message-label">DEVELOPMENT NOTICE</span>
+
+            <span class="message-status">
+              <span class="message-dot"></span>
+              WORK IN PROGRESS
+            </span>
+          </div>
+
+          <h3>This article is under development</h3>
+
+          <p>
+            This article is currently being developed and refined.
+            Some descriptions may be incomplete or subject to change.
+          </p>
+
+          <div class="message-footer">
+            <span class="message-code">ARTICLE // MODULE / AIRFOIL</span>
+            <span class="message-meta">STATUS: IN DEVELOPMENT</span>
+          </div>
+        </div>
       </div>
+
+      <div class="message-stripe"></div>
+    </div>
+
+
       <div id="airfoil" class="page-section">
         <div id="ADoverview">
           <p>Airfoil designer module allows user to design, modify and export airfoils using control points and geometry tools. <br>
@@ -277,41 +280,44 @@ const chapters = [
     group: "Airfoil Designer",
     id: "airfoil-geometry",
     title: "Airfoils geometry",
-    edit_date: "7.11.2026",
+    edit_date: "15.11.2026",
     body: `
-    <div class="wip-panel">
-        <div class="wip-stripe"></div>
+    
+    <div class="message-card" purpose="warning">
+      <div class="message-stripe"></div>
 
-        <div class="wip-content">
-          <div class="wip-icon">
-            <span>⚠</span>
-          </div>
-
-          <div class="wip-main">
-            <div class="wip-heading">
-              <span class="wip-label">DEVELOPMENT NOTICE</span>
-              <span class="wip-status">
-                <span class="wip-dot"></span>
-                WORK IN PROGRESS
-              </span>
-            </div>
-
-            <h3>This article is under development</h3>
-
-            <p>
-              This article is currently being developed and refined.
-              Some descriptions may be incomplete or subject to change.
-            </p>
-
-            <div class="wip-footer">
-              <span class="wip-code">ARTICLE // MODULE / AIRFOIL</span>
-              <span class="wip-message">SYSTEM STATUS: IN DEVELOPMENT</span>
-            </div>
-          </div>
+      <div class="message-content">
+        <div class="message-icon">
+          <span>⚠</span>
         </div>
 
-        <div class="wip-stripe"></div>
+        <div class="message-main">
+          <div class="message-heading">
+            <span class="message-label">DEVELOPMENT NOTICE</span>
+
+            <span class="message-status">
+              <span class="message-dot"></span>
+              WORK IN PROGRESS
+            </span>
+          </div>
+
+          <h3>This article is under development</h3>
+
+          <p>
+            This article is currently being developed and refined.
+            Some descriptions may be incomplete or subject to change.
+          </p>
+
+          <div class="message-footer">
+            <span class="message-code">ARTICLE // MODULE / AIRFOIL</span>
+            <span class="message-meta">STATUS: IN DEVELOPMENT</span>
+          </div>
+        </div>
       </div>
+
+      <div class="message-stripe"></div>
+    </div>
+
 
     <p>Daealus first and foremost goal is to help to create detailed, high quality, parametric airfoils with preserved continutity between the establishing curves.</p>
 
@@ -359,22 +365,70 @@ const chapters = [
     <h3>Append Airfoil</h3>
     <p>Any airfoil saved in '.arf' (Daedalus airfoil format of v0.3) and/or '.arf.ddls' (Daedalus airfoil format of v0.4) can be imported to Daedalus project.
     Call for <i>Append Airfoil</i> function opens a dialog where an airfoil from an exisitng file can be appended into the project. An airfoil can than be freely edited or used in other modules right away.</p>
-    <div class="note">
-        <div class="inside">
-          <h3>NOTE</h3>
-          If an airfoil is imported from an older version of Daedalus projects a shape of an airfoil can be changed due to changes in definition of airfoil creation. A check is advised.
+    
+    <div class="message-card" purpose="info">
+      <div class="message-stripe"></div>
+
+      <div class="message-content">
+        <div class="message-icon">
+          <span>ℹ</span>
+        </div>
+
+        <div class="message-main">
+          <div class="message-heading">
+            <span class="message-label">IMPORTANT NOTICE</span>
+
+            <span class="message-status">
+              <span class="message-dot"></span>
+              Verion change
+            </span>
+          </div>
+
+          <h3>Airfoil definition changed</h3>
+
+          <p>
+            If an airfoil is imported from an older version of Daedalus projects a shape of an airfoil can be changed due to changes in definition of airfoil creation. A check is advised.
+          </p>
+
         </div>
       </div>
+
+      <div class="message-stripe"></div>
+    </div>
 
     <h3>Delete</h3>
     <p>If an airfoil is no longer required in the project it can be deleted from the program.
     First select an airfoil in <a href="#manual/airfoil-widgets/ADAirfoilTree">Airfoil Tree</a>. Call for <i>Delete Airfoil</i> function.
     A warning will appear to confirm that deletion is intentional. Accepting deletion removes an airfoil from a Project.</p>
-    <div class="note">
-      <div class="inside">
-        <h3>NOTE</h3>
-        Daedalus program doesn't have the UNDO button yet. Really double check whether you want to remove objects from your program.
+
+    <div class="message-card" purpose="info">
+      <div class="message-stripe"></div>
+
+      <div class="message-content">
+        <div class="message-icon">
+          <span>ℹ</span>
+        </div>
+
+        <div class="message-main">
+          <div class="message-heading">
+            <span class="message-label">IMPORTANT NOTICE</span>
+
+            <span class="message-status">
+              <span class="message-dot"></span>
+              Lack of feature
+            </span>
+          </div>
+
+          <h3>Lacking function</h3>
+
+          <p>
+            Daedalus program doesn't have the UNDO button yet. Really double check whether you want to remove objects from your program.
+          </p>
+
+        </div>
       </div>
+
+      <div class="message-stripe"></div>
     </div>
 
     <h3>Flip Airfoil Horizontally</h3>
@@ -384,8 +438,19 @@ const chapters = [
     <p>This airfoil changes the LE, TE angles and wedge angles. It also swaps the position of Pressure and Suction side to follow their function in the flow.</p>
     
     <h3>Export Airfoil</h3>
+    <p>Airfoils created in Daedalus are just a set of parameters which using the appropraite equations create a splines. 
+    Yet, this set of parameters is not universal between softwares, therefore if an airfoil is to be used especailly in the CAD software it needs to be exported to any of the standard formats.</p>
+    <p>At this moment Daedalus can export airfoils to '.dxf' format. To do so select desired airfoil in <i>Airfoil Tree</i> and trigger <i>Export Airfoil</i> function. 
+    A dialog pops out and asks for the exported file name and directory. Confirm the operation to finish the process.</p>
+
     <h3>Rename Airfoil</h3>
+    <p>Airfoils in the project can be renamed, but they must have unique names as it is the way to match them to correct 3D objects after project is saved.</p>
+    <p>Execute <i>Rename Airfoil</i> function and specify the new name. The name will be checked and modified by internal <i>ensure_unique_name</i> process.
+    If the name is already taken by different airfoil last modified airfoil will be changed and an intiger will be added to its end. (e.g. Airfoil.001)</p>
+
     <h3>Fit to Reference</h3>
+    <p>It is possible to match the selected airfoil to the specified reference, by using a process which iteratively reduces the distance between the airfoil and the reference.</p>
+    <p>For detailed process description check the article: <a href="#manual/airfoil-fit2ref">File menu details</a></p></p>
 
     <h2>Attributes</h2>
     <p><i>Attributes do not hold any numerical value but rather a specific setting, key-word, or they point to specific object.</i></p>
@@ -569,39 +634,40 @@ const chapters = [
     edit_date: "11.11.2026",
     body: `
       <!-- Airfoil Designer Section -->
-      <div class="wip-panel">
-        <div class="wip-stripe"></div>
+      <div class="message-card" purpose="warning">
+      <div class="message-stripe"></div>
 
-        <div class="wip-content">
-          <div class="wip-icon">
-            <span>⚠</span>
-          </div>
-
-          <div class="wip-main">
-            <div class="wip-heading">
-              <span class="wip-label">DEVELOPMENT NOTICE</span>
-              <span class="wip-status">
-                <span class="wip-dot"></span>
-                WORK IN PROGRESS
-              </span>
-            </div>
-
-            <h3>This article is under development</h3>
-
-            <p>
-              This article is currently being developed and refined.
-              Some descriptions may be incomplete or subject to change.
-            </p>
-
-            <div class="wip-footer">
-              <span class="wip-code">ARTICLE // MODULE / AIRFOIL</span>
-              <span class="wip-message">SYSTEM STATUS: IN DEVELOPMENT</span>
-            </div>
-          </div>
+      <div class="message-content">
+        <div class="message-icon">
+          <span>⚠</span>
         </div>
 
-        <div class="wip-stripe"></div>
+        <div class="message-main">
+          <div class="message-heading">
+            <span class="message-label">DEVELOPMENT NOTICE</span>
+
+            <span class="message-status">
+              <span class="message-dot"></span>
+              WORK IN PROGRESS
+            </span>
+          </div>
+
+          <h3>This article is under development</h3>
+
+          <p>
+            This article is currently being developed and refined.
+            Some descriptions may be incomplete or subject to change.
+          </p>
+
+          <div class="message-footer">
+            <span class="message-code">ARTICLE // MODULE / AIRFOIL</span>
+            <span class="message-meta">STATUS: IN DEVELOPMENT</span>
+          </div>
+        </div>
       </div>
+
+      <div class="message-stripe"></div>
+    </div>
 
       <p>It is possible to load a background reference contorus in the Airfoil Designer Module. 
       Such airfoil will appear behind the currently designed airfoil and can guide the user to modify the parameters in the way to resamble it's shape or compare one to another.
@@ -624,39 +690,40 @@ const chapters = [
     edit_date: "7.11.2026",
     body: `
       <!-- Airfoil Designer Section -->
-      <div class="wip-panel">
-        <div class="wip-stripe"></div>
+      <div class="message-card" purpose="warning">
+      <div class="message-stripe"></div>
 
-        <div class="wip-content">
-          <div class="wip-icon">
-            <span>⚠</span>
-          </div>
-
-          <div class="wip-main">
-            <div class="wip-heading">
-              <span class="wip-label">DEVELOPMENT NOTICE</span>
-              <span class="wip-status">
-                <span class="wip-dot"></span>
-                WORK IN PROGRESS
-              </span>
-            </div>
-
-            <h3>This article is under development</h3>
-
-            <p>
-              This article is currently being developed and refined.
-              Some descriptions may be incomplete or subject to change.
-            </p>
-
-            <div class="wip-footer">
-              <span class="wip-code">ARTICLE // MODULE / AIRFOIL</span>
-              <span class="wip-message">SYSTEM STATUS: IN DEVELOPMENT</span>
-            </div>
-          </div>
+      <div class="message-content">
+        <div class="message-icon">
+          <span>⚠</span>
         </div>
 
-        <div class="wip-stripe"></div>
+        <div class="message-main">
+          <div class="message-heading">
+            <span class="message-label">DEVELOPMENT NOTICE</span>
+
+            <span class="message-status">
+              <span class="message-dot"></span>
+              WORK IN PROGRESS
+            </span>
+          </div>
+
+          <h3>This article is under development</h3>
+
+          <p>
+            This article is currently being developed and refined.
+            Some descriptions may be incomplete or subject to change.
+          </p>
+
+          <div class="message-footer">
+            <span class="message-code">ARTICLE // MODULE / AIRFOIL</span>
+            <span class="message-meta">STATUS: IN DEVELOPMENT</span>
+          </div>
+        </div>
       </div>
+
+      <div class="message-stripe"></div>
+    </div>
       <p></p>
 
       <h2 id="ADMenuBar">Menu Bar overview</h2>
@@ -695,12 +762,6 @@ const chapters = [
       <ul>
         <li><b>Show Reference:</b> Chooses a reference airfoil and makes it visible in viewport (works for selig format airfoils (.txt) and for ddls-parametric (.arf))</li>
       </ul>
-      <div class="note">
-        <div class="inside">
-          <h3>NOTE</h3>
-          To toggle a reference you must first select an airfoil from Airfoil Tree
-        </div>
-      </div>
 
       <h3>Program menu</h3>
       See the <a href="#manual/program-overview/ProgramMenu">Program menu details</a>.
@@ -755,39 +816,42 @@ const chapters = [
     title: "Fit to references",
     edit_date: "2.11.2026",
     body: `
-    <div class="wip-panel">
-        <div class="wip-stripe"></div>
+    <div class="message-card" purpose="warning">
+      <div class="message-stripe"></div>
 
-        <div class="wip-content">
-          <div class="wip-icon">
-            <span>⚠</span>
-          </div>
-
-          <div class="wip-main">
-            <div class="wip-heading">
-              <span class="wip-label">DEVELOPMENT NOTICE</span>
-              <span class="wip-status">
-                <span class="wip-dot"></span>
-                WORK IN PROGRESS
-              </span>
-            </div>
-
-            <h3>This article is under development</h3>
-
-            <p>
-              This article is currently being developed and refined.
-              Some descriptions may be incomplete or subject to change.
-            </p>
-
-            <div class="wip-footer">
-              <span class="wip-code">ARTICLE // MODULE / AIRFOIL</span>
-              <span class="wip-message">SYSTEM STATUS: IN DEVELOPMENT</span>
-            </div>
-          </div>
+      <div class="message-content">
+        <div class="message-icon">
+          <span>⚠</span>
         </div>
 
-        <div class="wip-stripe"></div>
+        <div class="message-main">
+          <div class="message-heading">
+            <span class="message-label">DEVELOPMENT NOTICE</span>
+
+            <span class="message-status">
+              <span class="message-dot"></span>
+              WORK IN PROGRESS
+            </span>
+          </div>
+
+          <h3>This article is under development</h3>
+
+          <p>
+            This article is currently being developed and refined.
+            Some descriptions may be incomplete or subject to change.
+          </p>
+
+          <div class="message-footer">
+            <span class="message-code">ARTICLE // MODULE / AIRFOIL</span>
+            <span class="message-meta">STATUS: IN DEVELOPMENT</span>
+          </div>
+        </div>
       </div>
+
+      <div class="message-stripe"></div>
+    </div>
+
+
       <p>
       This guide explains how to use <b>Fit Airfoil to Reference</b> function in the Airfoil Designer to make a Daedalus parametric airfoil follow a reference imported from <b>XY-point cloud</b>.
       </p>
@@ -800,12 +864,36 @@ const chapters = [
         If the reference already meets your expectaition you can load it directly in the Fit to Reference widget.</li>
       </ol>
 
-      <div class="note">
-        <div class="inside">
-          <h3>NOTE</h3>
-          Keep in mind that the fit is geometric: it matches contours, not lift, drag, stability, or other aerodynamic properties.
+
+      <div class="message-card" purpose="info">
+      <div class="message-stripe"></div>
+
+      <div class="message-content">
+        <div class="message-icon">
+          <span>ℹ</span>
+        </div>
+
+        <div class="message-main">
+          <div class="message-heading">
+            <span class="message-label">IMPORTANT NOTICE</span>
+
+            <span class="message-status">
+              <span class="message-dot"></span>
+              disclamer
+            </span>
+          </div>
+
+          <h3>Disclamer</h3>
+
+          <p>
+            Keep in mind that the fit is geometric: it matches contours, not lift, drag, stability, or other aerodynamic properties.
+          </p>
+
         </div>
       </div>
+
+      <div class="message-stripe"></div>
+    </div>
 
       <h2>Workflow</h2>
       <ol>
@@ -908,39 +996,42 @@ const chapters = [
     edit_date: "2.11.2026",
     body: `
       <!-- Wing Workbench Section -->
-      <div class="wip-panel">
-        <div class="wip-stripe"></div>
+      <div class="message-card" purpose="warning">
+      <div class="message-stripe"></div>
 
-        <div class="wip-content">
-          <div class="wip-icon">
-            <span>⚠</span>
-          </div>
-
-          <div class="wip-main">
-            <div class="wip-heading">
-              <span class="wip-label">DEVELOPMENT NOTICE</span>
-              <span class="wip-status">
-                <span class="wip-dot"></span>
-                WORK IN PROGRESS
-              </span>
-            </div>
-
-            <h3>This article is under development</h3>
-
-            <p>
-              This article is currently being developed and refined.
-              Some descriptions may be incomplete or subject to change.
-            </p>
-
-            <div class="wip-footer">
-              <span class="wip-code">ARTICLE // MODULE / WING</span>
-              <span class="wip-message">SYSTEM STATUS: IN DEVELOPMENT</span>
-            </div>
-          </div>
+      <div class="message-content">
+        <div class="message-icon">
+          <span>⚠</span>
         </div>
 
-        <div class="wip-stripe"></div>
+        <div class="message-main">
+          <div class="message-heading">
+            <span class="message-label">DEVELOPMENT NOTICE</span>
+
+            <span class="message-status">
+              <span class="message-dot"></span>
+              WORK IN PROGRESS
+            </span>
+          </div>
+
+          <h3>This article is under development</h3>
+
+          <p>
+            This article is currently being developed and refined.
+            Some descriptions may be incomplete or subject to change.
+          </p>
+
+          <div class="message-footer">
+            <span class="message-code">ARTICLE // MODULE / AIRFOIL</span>
+            <span class="message-meta">STATUS: IN DEVELOPMENT</span>
+          </div>
+        </div>
       </div>
+
+      <div class="message-stripe"></div>
+    </div>
+
+
       <div id="wing" class="page-section active">
         <div id="WDoverview">
           <p>Assemble full wings from created / established in Airfoil Designer profiles.
@@ -969,39 +1060,42 @@ const chapters = [
     title: "Widgets overview",
     edit_date: "2.11.2026",
     body: `
-    <div class="wip-panel">
-        <div class="wip-stripe"></div>
+    <div class="message-card" purpose="warning">
+      <div class="message-stripe"></div>
 
-        <div class="wip-content">
-          <div class="wip-icon">
-            <span>⚠</span>
-          </div>
-
-          <div class="wip-main">
-            <div class="wip-heading">
-              <span class="wip-label">DEVELOPMENT NOTICE</span>
-              <span class="wip-status">
-                <span class="wip-dot"></span>
-                WORK IN PROGRESS
-              </span>
-            </div>
-
-            <h3>This article is under development</h3>
-
-            <p>
-              This article is currently being developed and refined.
-              Some descriptions may be incomplete or subject to change.
-            </p>
-
-            <div class="wip-footer">
-              <span class="wip-code">ARTICLE // MODULE / WING</span>
-              <span class="wip-message">SYSTEM STATUS: IN DEVELOPMENT</span>
-            </div>
-          </div>
+      <div class="message-content">
+        <div class="message-icon">
+          <span>⚠</span>
         </div>
 
-        <div class="wip-stripe"></div>
+        <div class="message-main">
+          <div class="message-heading">
+            <span class="message-label">DEVELOPMENT NOTICE</span>
+
+            <span class="message-status">
+              <span class="message-dot"></span>
+              WORK IN PROGRESS
+            </span>
+          </div>
+
+          <h3>This article is under development</h3>
+
+          <p>
+            This article is currently being developed and refined.
+            Some descriptions may be incomplete or subject to change.
+          </p>
+
+          <div class="message-footer">
+            <span class="message-code">ARTICLE // MODULE / AIRFOIL</span>
+            <span class="message-meta">STATUS: IN DEVELOPMENT</span>
+          </div>
+        </div>
       </div>
+
+      <div class="message-stripe"></div>
+    </div>
+
+
         <div id="WDMenuBar">
           <h2>Menu Bar overview</h2>
           <h3>File menu</h3>
